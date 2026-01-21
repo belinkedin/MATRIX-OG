@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MATRIX OG | Redefining Street Culture</title>
 
-    <!-- Tailwind CDN (CSS only, safe) -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Fonts -->
@@ -33,7 +33,6 @@
       };
     </script>
 
-    <!-- ✅ FIXED STYLE BLOCK -->
     <style>
       html {
         scroll-behavior: smooth;
@@ -68,4 +67,10 @@
     </style>
   </head>
 
-  <body class="bg-
+  <body class="bg-darker text-white antialiased">
+    <div id="root"></div>
+
+    <!-- Vite React entry -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
