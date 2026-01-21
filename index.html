@@ -6,7 +6,6 @@
   <title>MATRIX OG | Redefining Street Culture</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Orbitron:wght@900&display=swap" rel="stylesheet">
 
   <script>
@@ -45,7 +44,6 @@
     }
   </style>
 
-  <!-- KEEPING YOUR IMPORTMAP (UNCHANGED) -->
   <script type="importmap">
   {
     "imports": {
@@ -59,12 +57,14 @@
 
 <body class="bg-darker text-white antialiased">
 
-  <!-- ROOT STAYS -->
+  <!-- YOUR ORIGINAL ROOT (UNCHANGED) -->
   <div id="root"></div>
 
-  <!-- 🔑 ONLY FIX: STATIC RENDER -->
+  <!-- ✅ ONLY ADDITION (NO STRUCTURE CHANGE) -->
   <script>
-    document.getElementById("root").innerHTML = `
+    const root = document.getElementById("root");
+
+    root.innerHTML = `
       <section class="min-h-screen flex items-center justify-center text-center">
         <div>
           <h1 class="text-6xl font-display neon-text text-matrix">
@@ -74,13 +74,13 @@
             Redefining Street Culture
           </p>
 
-          <div class="mt-8 flex gap-4 justify-center">
+          <div class="mt-8 flex justify-center gap-4">
             <a href="./collection.html"
-              class="bg-matrix text-black px-6 py-3 font-bold neon-border">
+               class="bg-matrix text-black px-6 py-3 font-bold neon-border">
               View Collection
             </a>
             <a href="#location"
-              class="border border-matrix px-6 py-3 neon-border">
+               class="border border-matrix px-6 py-3 neon-border">
               Visit Store
             </a>
           </div>
@@ -91,4 +91,3 @@
 
 </body>
 </html>
-
