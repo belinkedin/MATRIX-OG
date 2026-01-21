@@ -1,103 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MATRIX OG | Redefining Street Culture</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Orbitron:wght@900&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              matrix: '#ff0000',
-              darker: '#050505',
-              card: '#0a0a0a'
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Orbitron', 'sans-serif']
-            }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MATRIX OG | Redefining Street Culture</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            matrix: '#ff0000',
+            darker: '#050505',
+            card: '#0a0a0a'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Orbitron', 'sans-serif']
           }
         }
       }
-    </script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #050505;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #ff0000;
-        border-radius: 4px;
-      }
-      .neon-text {
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.3);
-      }
-      .neon-border {
-        box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .neon-border:hover {
-        box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
-        border-color: #ff0000;
-      }
+    }
+  </script>
 
-      /* Scroll Reveal */
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .reveal.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Active Nav State */
-      .nav-link {
-        position: relative;
-      }
-      .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 0%;
-        height: 2px;
-        background-color: #ff0000;
-        transition: width 0.3s ease;
-      }
-      .nav-link.active::after {
-        width: 100%;
-      }
-      .nav-link.active {
-        color: #ff0000;
-      }
-
-      /* Floating buttons shadow */
-      .float-shadow {
-        filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.3));
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
-  }
-}
-</script>
+  <style>
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #050505; }
+    ::-webkit-scrollbar-thumb { background: #ff0000; border-radius: 4px; }
+    .neon-text {
+      text-shadow: 0 0 10px rgba(255,0,0,.5),0 0 20px rgba(255,0,0,.3);
+    }
+  </style>
 </head>
-  <body class="bg-darker text-white antialiased">
-    <div id="root"></div>
-  </body>
+
+<body class="bg-darker text-white font-sans">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 w-full bg-black/90 z-50 border-b border-red-900">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="text-2xl font-display text-matrix">MATRIX OG</div>
+      <nav class="space-x-6 text-sm uppercase">
+        <a href="#home" class="hover:text-matrix">Home</a>
+        <a href="#products" class="hover:text-matrix">Products</a>
+        <a href="./collection.html" class="hover:text-matrix">Collection</a>
+        <a href="#location" class="hover:text-matrix">Location</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="min-h-screen flex items-center justify-center text-center pt-24">
+    <div>
+      <h1 class="text-6xl font-display neon-text">MATRIX OG</h1>
+      <p class="mt-6 text-gray-400 max-w-xl mx-auto">
+        Redefining modern Indian street culture with bold design and attitude.
+      </p>
+      <div class="mt-8 flex justify-center gap-4">
+        <a href="./collection.html" class="bg-matrix px-6 py-3 font-bold text-black">View Collection</a>
+        <a href="./index.html" class="border border-matrix px-6 py-3">Visit Site</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="py-20 bg-black">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-display mb-10">Featured Products</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-card p-6 border border-red-900">
+          <h3 class="font-bold">OG Street Hoodie</h3>
+          <p class="text-gray-400 mt-2">Urban comfort, oversized fit</p>
+        </div>
+        <div class="bg-card p-6 border border-red-900">
+          <h3 class="font-bold">Matrix Cargo</h3>
+          <p class="text-gray-400 mt-2">Built for street movement</p>
+        </div>
+        <div class="bg-card p-6 border border-red-900">
+          <h3 class="font-bold">Oversized Tee</h3>
+          <p class="text-gray-400 mt-2">Minimal. Bold. OG.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location" class="py-20 bg-darker">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-display mb-4">Infiltrate Our HQ</h2>
+        <p class="text-gray-400 leading-relaxed">
+          TOWER 1, SONA, NO.7,8,<br>
+          M/S. DINDUGAL FASHION POINT,<br>
+          Palani Rd, New Agraharam,<br>
+          Dindigul, Tamil Nadu 624001
+        </p>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=TOWER+1+SONA+Dindigul"
+          target="_blank"
+          class="inline-block mt-6 bg-matrix px-6 py-3 font-bold text-black"
+        >
+          Get Directions
+        </a>
+      </div>
+
+      <iframe
+        class="w-full h-80 border border-red-900"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Dindigul+Tamil+Nadu&output=embed">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 text-center text-gray-500 border-t border-red-900">
+    © 2026 MATRIX OG. All rights reserved.
+  </footer>
+
+</body>
 </html>
